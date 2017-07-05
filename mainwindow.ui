@@ -147,7 +147,7 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>column count:</string>
+          <string>columns count:</string>
          </property>
         </widget>
        </item>
