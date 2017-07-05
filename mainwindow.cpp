@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QDebug>
 #include <QClipboard>
 #include <QMimeData>
 
@@ -10,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     , mColCount(8)
 {
     ui->setupUi(this);
-    setWindowTitle("Hexit (2016, Ermat E. Kiyomov)");
+    setWindowTitle("Hexit (2016, Yormuhammad)");
     connect(ui->btnClear, SIGNAL(clicked()), this, SLOT(onBtnClearClick()));
     connect(ui->btnClearNonHex, SIGNAL(clicked()), this, SLOT(onBtnClearNonHexClick()));
     connect(ui->btnConvertFromC, SIGNAL(clicked()), this, SLOT(onBtnConvertFromCClick()));
@@ -20,8 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnPaste, SIGNAL(clicked()), this, SLOT(onBtnPasteClick()));
     connect(ui->btnClose, SIGNAL(clicked()), this, SLOT(onBtnCloseClick()));
     mClipboard = QApplication::clipboard();
-//    ui->editHex->setPlainText("5E E4 B6 35 3B E6 19 47 3D B5 D5 6D 2B 56 1C 96 1D 07 48 A7 4C D5 5C 41 9E 7A F1 55 7D 12 6A B0");
-//    onBtnClearNonHexClick();
     ui->comboColumnCount->addItem("8");
     ui->comboColumnCount->addItem("12");
     ui->comboColumnCount->addItem("16");
